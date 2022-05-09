@@ -19,8 +19,8 @@ cp xml/05.Num.xml clean/04-Num.xml
 cp xml/06.Deut.xml clean/05-Deut.xml
 
 #./bin/5-clean-combine-subtype.py xml/07.JoshB.xml xml1/08.JoshA.xml  specific/
-cp xml/07JoshB.xml clean/06-JoshB.xml 
-cp xml/08JoshA.xml clean/06-JoshA.xml 
+cp xml/07.JoshB.xml clean/06-JoshB.xml 
+cp xml/08.JoshA.xml clean/06-JoshA.xml 
 
 #./bin/5-clean-combine-subtype.py xml/09.JudgesB.xml  xml1/10.JudgesA.xml  specific/
 cp xml/10.JudgesA.xml clean/07-JudgesA.xml
@@ -78,8 +78,8 @@ cp xml/57.Ezek.xml clean/51-Ezek.xml
 #TODO: what about 52 PrAzar the prayer of azariah in the book of daniel ()
 
 #./bin/5-clean-combine-subtype.py xml/63.SusOG.xml  xml1/64.SusTh.xml  specific/
-cp  xml/64.SusTh clean/53-SusTh.xml
-cp  xml/63.susOG.xml clean/53-SusOG.xml
+cp  xml/64.SusTh.xml clean/53-SusTh.xml
+cp  xml/63.SusOG.xml clean/53-SusOG.xml
 
 #./bin/5-clean-combine-subtype.py xml/61.DanielOG.xml  xml1/62.DanielTh.xml  tmp/
 cp xml/62.DanielTh.xml clean/54-DanielTh.xml
