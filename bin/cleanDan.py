@@ -30,7 +30,7 @@ def moveTitle(myFile):
 
 print("Dealing with Daniel's title")
 
-newFile="%s/%s"%(outputDir,"54-Dan.xml")
+newFile="%s/%s"%(outputDir,"54-DanielOG.xml")
 
 newXml=moveTitle(inputFile)
 
