@@ -23,8 +23,8 @@ cp xml/07.JoshB.xml clean/06-JoshB.xml
 cp xml/08.JoshA.xml clean/06-JoshA.xml 
 
 #./bin/5-clean-combine-subtype.py xml/09.JudgesB.xml  xml1/10.JudgesA.xml  specific/
-cp xml/10.JudgesA.xml clean/07-JudgesA.xml
-cp xml/09.JudgesB.xml clean/07-JudgesB.xml
+cp xml/10.JudgesA.xml clean/07-JudgA.xml
+cp xml/09.JudgesB.xml clean/07-JudgB.xml
 
 cp xml/11.Ruth.xml clean/08-Ruth.xml
 cp xml/12.1Sam.xml clean/09-1Sam.xml
@@ -39,8 +39,8 @@ cp xml/20.Esther.xml clean/18-Esth.xml
 cp xml/21.Judith.xml clean/19-Jdt.xml
 
 #./bin/5-clean-combine-subtype.py xml/22.TobitBA.xml  xml1/23.TobitS.xml  specific/
-cp xml/22.TobitBA.xml clean/20-TobitBA.xml
-cp xml/23.TobitS.xml clean/20-TobitS.xml
+cp xml/22.TobitBA.xml clean/20-TobBA.xml
+cp xml/23.TobitS.xml clean/20-TobS.xml
 
 cp xml/24.1Macc.xml clean/21-1Macc.xml
 cp xml/25.2Macc.xml clean/22-2Macc.xml
@@ -82,8 +82,8 @@ cp  xml/64.SusTh.xml clean/53-SusTh.xml
 cp  xml/63.SusOG.xml clean/53-SusOG.xml
 
 #./bin/5-clean-combine-subtype.py xml/61.DanielOG.xml  xml1/62.DanielTh.xml  tmp/
-cp xml/62.DanielTh.xml clean/54-DanielTh.xml
-./bin/cleanDan.py xml/61.DanielOG.xml clean
+cp xml/62.DanielTh.xml clean/54-DanTh.xml
+./bin/cleanDan.py xml/61.DanOG.xml clean
 
 #./bin/5-clean-combine-subtype.py xml/59.BelOG.xml  xml1/60.BelTh.xml  specific/
 cp xml/60.BelTh.xml clean/55-BelTh.xml
