@@ -83,7 +83,7 @@ cp  xml/63.SusOG.xml clean/53-SusOG.xml
 
 #./bin/5-clean-combine-subtype.py xml/61.DanielOG.xml  xml1/62.DanielTh.xml  tmp/
 cp xml/62.DanielTh.xml clean/54-DanTh.xml
-./bin/cleanDan.py xml/61.DanOG.xml clean
+./bin/cleanDan.py xml/61.DanielOG.xml clean
 
 #./bin/5-clean-combine-subtype.py xml/59.BelOG.xml  xml1/60.BelTh.xml  specific/
 cp xml/60.BelTh.xml clean/55-BelTh.xml

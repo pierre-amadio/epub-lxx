@@ -13,7 +13,6 @@ from bs4 import BeautifulSoup
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
 
-
 def moveTitle(myFile):
   with open(myFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
@@ -30,7 +29,7 @@ def moveTitle(myFile):
 
 print("Dealing with Daniel's title")
 
-newFile="%s/%s"%(outputDir,"54-DanielOG.xml")
+newFile="%s/%s"%(outputDir,"54-DanOG.xml")
 
 newXml=moveTitle(inputFile)
 
