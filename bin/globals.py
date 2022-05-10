@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #needs 2 chapter (toc&forewords) before the actual content.
-indexOffset=2
+indexOffset=3
 
 bookInfo=[]
 bookInfo.append({'id': 'Gen', 'prefix': '01', 'postfix': ''})

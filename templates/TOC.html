@@ -8,6 +8,19 @@
 </head>
 
 <body>
-  <p>&nbsp;</p>
+
+<ul>
+{% for book in books -%}
+<li>
+ <a href="{{book.file}}">{{book.name}}</a>
+ <ul>
+ {%for chapter in book.chapters -%}
+ <li><a href="{{chapter.file}}">{{chapter.name}}</a></li>
+ {% endfor -%}
+ </ul>
+</li>
+{% endfor -%}
+</ul>
+
 </body>
 </html>

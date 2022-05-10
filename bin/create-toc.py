@@ -3,7 +3,7 @@
 """
 create the table of contents data.
 first arguments: list of xml file.
-second argument: where to store the output
+last argument: where to store the output
 """
 import sys
 import re
@@ -13,21 +13,6 @@ from jinja2 import Template,FileSystemLoader,Environment
 
 file_loader = FileSystemLoader("templates")
 env = Environment(loader=file_loader)
-
-htmlDir=sys.argv[1]
-outputDir=sys.argv[2]
-
-"""
-for bookData in bookInfo:
-    print(bookData)
-    bookId=bookData["id"]
-    bookPrefix=bookData["prefix"]
-    actualPrefix=int(bookPrefix)+indexOffset
-    bookPostfix=bookData["postfix"]
-
-    bookHtml="%s/%02d-%s%s.html"%(htmlDir,actualPrefix,bookId,bookPostfix)
-    print(bookHtml)
-"""
 
 playOrderIdCnt=indexOffset+1
 data=[]
@@ -46,9 +31,9 @@ data.append({
     "file":"Text/02-Foreword.html"
     })
 
-
 fileCnt=2
 for curXmlFileName in sys.argv[1:-1]:
+    print(curXmlFileName)
     with open(curXmlFileName) as fp:
         soup=BeautifulSoup(fp,features='xml')
         for book in soup.find_all('div',type="book"):
@@ -62,7 +47,7 @@ for curXmlFileName in sys.argv[1:-1]:
             prefix=m.group(1)
             postfix=m.group(2)
 
-            bookName="%s %s"(bookOsisId,postfix)
+            bookName="%s %s"%(bookOsisId,postfix)
             bookIndex=getBookIndex(bookOsisId,prefix,postfix)+indexOffset
             fileName="Text/%02d-%s%s.html"%(bookIndex,bookOsisId,postfix)
             curBook["name"]=bookName
@@ -101,4 +86,10 @@ fileOutput="toc.ncx"
 with open(fileOutput,"w") as f:
     f.write(ncxOutput)
 
-    
+tocTemplate = env.get_template("TOC.html")
+tocOutput = tocTemplate.render(books=data)
+
+fileOutput="%s/01-TOC.html"%sys.argv[-1]
+with open(fileOutput,"w") as f:
+    f.write(tocOutput)
+
