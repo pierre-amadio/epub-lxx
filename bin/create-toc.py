@@ -70,26 +70,35 @@ for curXmlFileName in sys.argv[1:-1]:
             curBook["playOrderId"]=fileCnt
             fileCnt+=1
             curBook["file"]=fileName
+            curBook["chapters"]=[]
         
             for chapter in book.find_all("chapter"):
+                curChapter={}
                 pattern="%s.(\d+)"%bookOsisId
                 m=re.match(pattern,chapter["osisID"])
                 if not m:
                     print("cannot match",chapter["osisID"])
                     sys.exit()
+
                 curChapterNbr=m.group(1)
+                fileName="Text/%02d-%s%s-%s.html"%(bookIndex,bookOsisId,postfix,curChapterNbr)
+                curChapter["navpointId"]=fileCnt
+                curChapter["playOrderId"]=fileCnt
+                fileCnt+=1
+                curChapter["name"]="Chapter %s"%curChapterNbr
+                curChapter["file"]=fileName
             
-            
-            """
-            ncxTemplate = env.get_template("toc.ncx")
-            ncxOutput = bookTemplate.render(book={"name":bookName})
+                curBook["chapters"].append(curChapter) 
 
-            bookIndex=getBookIndex(bookOsisId,prefix,postfix)+indexOffset
-            fileOutput="%s/%02d-%s%s.html"%(outputDir,bookIndex,bookOsisId,postfix)
-            with open(fileOutput,"w") as f:
-                f.write(bookOutput)
-            for chapter in book.find_all("chapter"):
-                createChapterHtml(chapter,bookOsisId,bookIndex,postfix)
+            data.append(curBook)
 
-                
-            """         
+
+
+ncxTemplate = env.get_template("toc.ncx")
+ncxOutput = ncxTemplate.render(books=data)
+
+fileOutput="toc.ncx"
+with open(fileOutput,"w") as f:
+    f.write(ncxOutput)
+
+    
