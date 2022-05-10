@@ -17,3 +17,7 @@ done
 ./bin/create-toc.py clean/* html
 
 cp templates/Foreword.html html/02-Foreword.html
+
+#download the need font
+wget https://software.sil.org/downloads/r/gentium/GentiumPlus-6.101.zip
+
