@@ -53,7 +53,6 @@ def createChapterHtml(chapter,bookOsisId,bookIndex,postfix):
 
     chapterTemplate = env.get_template("chapter.html")
     chapterOutput = chapterTemplate.render(chapter=data)
-    print(data)
     fileOutput="%s/%02d-%s%s-%s.html"%(outputDir,bookIndex,bookOsisId,postfix,chapterNbr)
     with open(fileOutput,"w") as f:
         f.write(chapterOutput)
@@ -75,8 +74,7 @@ with open(inputFile) as fp:
         bookTemplate = env.get_template("book.html")
         bookOutput = bookTemplate.render(book={"name":bookName})
         bookIndex=getBookIndex(bookOsisId,prefix,postfix)
-        fileOutput="%s/%02d-%s.html"%(outputDir,bookIndex,bookOsisId)
-        print("book",fileOutput)
+        fileOutput="%s/%02d-%s%s.html"%(outputDir,bookIndex,bookOsisId,postfix)
         with open(fileOutput,"w") as f:
             f.write(bookOutput)
         for chapter in book.find_all("chapter"):
