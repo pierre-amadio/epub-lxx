@@ -62,7 +62,7 @@ for curXmlFileName in sys.argv[1:-1]:
             prefix=m.group(1)
             postfix=m.group(2)
 
-            bookName=bookOsisId 
+            bookName="%s %s"(bookOsisId,postfix)
             bookIndex=getBookIndex(bookOsisId,prefix,postfix)+indexOffset
             fileName="Text/%02d-%s%s.html"%(bookIndex,bookOsisId,postfix)
             curBook["name"]=bookName
