@@ -14,4 +14,4 @@ for i in `ls clean` ; do
   ./bin/create-html.py clean/$i html
 done
 
-
+./bin.create-toc.py clean/* html

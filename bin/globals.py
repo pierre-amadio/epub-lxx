@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#needs 2 chapter (toc&forewords) before the actual content.
+indexOffset=2
+
 bookInfo=[]
 bookInfo.append({'id': 'Gen', 'prefix': '01', 'postfix': ''})
 bookInfo.append({'id': 'Exod', 'prefix': '02', 'postfix': ''})

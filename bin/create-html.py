@@ -12,8 +12,6 @@ env = Environment(loader=file_loader)
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
 
-#needs 2 chapter (toc&forewords) before the actual content
-indexOffset=2
 
 def createChapterHtml(chapter,bookOsisId,bookIndex,postfix):
     chapterId=chapter["osisID"]
