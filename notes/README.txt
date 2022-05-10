@@ -15,3 +15,6 @@ for i in `ls clean` ; do
 done
 
 ./bin.create-toc.py clean/* html
+
+cp templates/Foreword.html html/02-Foreword.html
+cp templates/TOC.html html/TOC.html
