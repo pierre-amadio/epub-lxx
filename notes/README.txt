@@ -1,6 +1,7 @@
 #Download the original text (result stored in ./original-text/lxxmorph
 ./bin/downloadRawText.sh
 #Convert this to imp (result stored in ./imp)
+#TODO: fix proverb chapter numbering.
 ./bin/convertToImp.sh
 #Convert in xml (stored in ./xml 
 ./bin/convertToXml.sh
