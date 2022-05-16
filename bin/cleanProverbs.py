@@ -50,7 +50,7 @@ print("Dealing with Proverbs")
 
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
-outputFile="%s/27.Prov.xml"%outputDir
+outputFile="%s/27-Prov.xml"%outputDir
 
 with open(inputFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
