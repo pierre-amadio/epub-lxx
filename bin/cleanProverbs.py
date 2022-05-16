@@ -44,6 +44,7 @@ There are 2 "chapter 24" (v 1-22e and v23-34) in the xml file. Need to be merged
 import sys
 import re
 from bs4 import BeautifulSoup
+import copy
 
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
@@ -52,4 +53,17 @@ outputFile="27.Proverbs.xml"
 with open(inputFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
 
-print(soup)
+new=copy.copy(soup)
+for chapter in new.find_all("chapter"):
+    m=re.match("Prov.(\d+)",chapter["osisID"])
+    if not m:
+        print("Cannot parse",chatper["osisID"])
+        sys.exit()
+    curChapter=int(m.group(1))
+    if curChapter<=23:
+        continue
+    print("new chapter to be removed",curChapter)
+    chapter.decompose()
+
+
+
