@@ -53,17 +53,36 @@ outputFile="27.Proverbs.xml"
 with open(inputFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
 
+"""
+We create a new soup with only the first 23 chapters.
+"""
 new=copy.copy(soup)
 for chapter in new.find_all("chapter"):
     m=re.match("Prov.(\d+)",chapter["osisID"])
     if not m:
-        print("Cannot parse",chatper["osisID"])
+        print("Cannot parse",chapter["osisID"])
         sys.exit()
     curChapter=int(m.group(1))
     if curChapter<=23:
         continue
-    print("new chapter to be removed",curChapter)
     chapter.decompose()
 
 
+"""
+Now, lets deal with chapters 24.
+"""
 
+copyChapter=[]
+for curCha in soup.find_all("chapter"):
+    if curCha["osisID"]=='Prov.24':
+        copyChapter.append(copy.copy(curCha))
+
+newChapter=copyChapter[0]
+for verse in newChapter.find_all("verse"):
+    m=re.match("Prov.24.(\d+)",verse["osisID"])
+    if not m:
+        print("Cannot parse",verse["osisID"])
+        sys.exit()
+    curVerse=int(m.group(1))
+    print(curVerse)
+ 
