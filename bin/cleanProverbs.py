@@ -48,7 +48,7 @@ import copy
 
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
-outputFile="27.Proverbs.xml"
+outputFile="%s/27.Prov.xml"%outputDir
 
 with open(inputFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
@@ -158,6 +158,6 @@ curDiv=new.find_all(osisID="Prov")[0]
 for ind in range(24,32):
     curDiv.append(newChapters[ind]) 
 
+with open(outputFile,"w",encoding='utf-8') as file:
+    file.write(str(new))
 
-
-print(new)
