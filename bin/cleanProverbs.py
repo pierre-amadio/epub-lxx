@@ -106,7 +106,6 @@ lets deal with chapter 25 to 29
 """
 
 def changeChapter(s,f,t):
-    print("changing from %s to %s"%(f,t))
     for curChapter in s.find_all("chapter"):
         if curChapter["osisID"]=="Prov.%s"%f:
             output=copy.copy(curChapter)
@@ -119,10 +118,44 @@ def changeChapter(s,f,t):
                     sys.exit()
                 newID="Prov.%s.%s"%(t,m.group(1))
                 curV["osisID"]=newID
-            print(output)
+            return (output)
 
 newChapters[25]=changeChapter(soup,32,25)
 newChapters[26]=changeChapter(soup,33,26)
 newChapters[27]=changeChapter(soup,34,27)
 newChapters[28]=changeChapter(soup,35,28)
 newChapters[29]=changeChapter(soup,36,29)
+
+"""
+LEt s deal with chapter 30
+"""
+copyChapter=[]
+for curCha in soup.find_all("chapter"):
+    if curCha["osisID"]=='Prov.30':
+        copyChapter.append(copy.copy(curCha))
+
+for verse in copyChapter[1].find_all("verse"):
+    newChapter.append(verse)
+
+newChapters[30]=newChapter
+
+
+"""
+Let s deal with chapter 31
+"""
+copyChapter=[]
+for curCha in soup.find_all("chapter"):
+    if curCha["osisID"]=='Prov.31':
+        copyChapter.append(copy.copy(curCha))
+
+for verse in copyChapter[1].find_all("verse"):
+    newChapter.append(verse)
+
+newChapters[31]=newChapter
+curDiv=new.find_all(osisID="Prov")[0]
+
+
+for ind in range(24,32):
+    curDiv.append(newChapters[ind]) 
+
+
