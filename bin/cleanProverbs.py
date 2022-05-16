@@ -58,6 +58,11 @@ with open(inputFile) as fp:
 
 newChapters={}
 
+def plop(s):
+    for i in s.find_all("verse"):
+        print(i["osisID"])
+        
+
 """
 We create a new soup with only the first 23 chapters.
 """
@@ -104,6 +109,10 @@ for verse in copyChapter[1].find_all("verse"):
 newChapters[24]=copy.copy(newChapter)
 
 """
+for i in newChapters[24]:
+    print(i)
+"""
+"""
 lets deal with chapter 25 to 29
 """
 
@@ -129,12 +138,14 @@ newChapters[28]=changeChapter(soup,35,28)
 newChapters[29]=changeChapter(soup,36,29)
 
 """
-LEt s deal with chapter 30
+Let s deal with chapter 30
 """
 copyChapter=[]
 for curCha in soup.find_all("chapter"):
     if curCha["osisID"]=='Prov.30':
         copyChapter.append(copy.copy(curCha))
+        
+newChapter=copyChapter[0]
 
 for verse in copyChapter[1].find_all("verse"):
     newChapter.append(verse)
@@ -150,12 +161,13 @@ for curCha in soup.find_all("chapter"):
     if curCha["osisID"]=='Prov.31':
         copyChapter.append(copy.copy(curCha))
 
+newChapter=copyChapter[0]
+
 for verse in copyChapter[1].find_all("verse"):
     newChapter.append(verse)
 
 newChapters[31]=newChapter
 curDiv=new.find_all(osisID="Prov")[0]
-
 
 for ind in range(24,32):
     curDiv.append(newChapters[ind]) 
