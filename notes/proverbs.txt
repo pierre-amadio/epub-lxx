@@ -1,39 +1,52 @@
 Proverbs numbering are odd:
 
 <chapter osisID="Prov.23">
-ἐὰν καθίσῃς δειπνεῖν ἐπὶ τραπέζης
-
 <chapter osisID="Prov.24">
-υἱέ μὴ ζηλώσῃς κακοὺς ἄνδρας
-
 <chapter osisID="Prov.30">
-τοὺς ἐμοὺς λόγους υἱέ φοβήθητι
-
 <chapter osisID="Prov.24">
-ταῦτα δὲ λέγω ὑμῖν τοῖς σοφοῖς ἐπιγινώσκειν
-
 <chapter osisID="Prov.30">
-(15) τῇ βδέλλῃ τρεῖς θυγατέρες ἦσαν ἀγαπήσει ἀγαπώμεναι καὶ αἱ τρεῖς αὗται οὐκ ἐνε
-
 <chapter osisID="Prov.31">
-οἱ ἐμοὶ λόγοι εἴρηνται ὑπὸ θεοῦ
-
 <chapter osisID="Prov.32">
-αὗται αἱ παιδεῖαι σαλωμῶντος αἱ ἀδιάκριτοι
-
 <chapter osisID="Prov.33">
-ὥσπερ δρόσος ἐν ἀμήτῳ καὶ ὥσπερ ὑετὸς ἐν θέρει
-
 <chapter osisID="Prov.34">
-μὴ καυχῶ τὰ εἰς αὔριον οὐ γὰρ γινώσκεις 
-
 <chapter osisID="Prov.35">
-φεύγει ἀσεβὴς μηδενὸς διώκοντος δίκαιος δὲ ὥσπερ
-
 <chapter osisID="Prov.36">
- κρείσσων ἀνὴρ ἐλέγχων ἀνδρὸς σκληροτραχήλου
-
 <chapter osisID="Prov.31">
-(10) γυναῖκα ἀνδρείαν τίς εὑρήσει
 #################################
+
+
+there are several 24.22 , appearing as following in the reader edition:
+
+Prov.24.22
+ ἐξαίφνης γὰρ τείσονται τοὺς ἀσεβεῖς τὰς δὲ τιμωρίας ἀμφοτέρων τίς γνώσεται
+Prov.24.22.a
+ λόγον φυλασσόμενος υἱὸς ἀπωλείας ἐκτὸς ἔσται δεχόμενος δὲ ἐδέξατο αὐτόν
+Prov.24.22.b
+ μηδὲν ψεῦδος ἀπὸ γλώσσης βασιλεῖ λεγέσθω καὶ οὐδὲν ψεῦδος ἀπὸ γλώσσης αὐτοῦ οὐ μὴ ἐξέλθῃ
+Prov.24.22.c
+ μάχαιρα γλῶσσα βασιλέως καὶ οὐ σαρκίνη ὃς δ’ ἂν παραδοθῇ συντριβήσεται
+Prov.24.22.d
+ ἐὰν γὰρ ὀξυνθῇ ὁ θυμὸς αὐτοῦ σὺν νεύροις ἀνθρώπους ἀναλίσκει
+Prov.24.22.e
+ καὶ ὀστᾶ ἀνθρώπων κατατρώγει καὶ συγκαίει ὥσπερ φλὸξ ὥστε ἄβρωτα εἶναι νεοσσοῖς ἀετῶν
+
+then The reader continue with the "second" chapter 24:(verse 23 to 34)
+######################
+reader's edition chapter 25 is xml Chapter Prov.32
+Prov.32.1
+ αὗται αἱ παιδεῖαι σαλωμῶντος αἱ ἀδιάκριτοι ἃς ἐξεγράψαντο οἱ φίλοι Εζεκιου τοῦ βασιλέως τῆς Ιουδαίας
+
+reader edition chapter 26 is xml Chapter Prov.33
+
+reader edition chapter 27 is xml chapter Prov.34
+
+reader edition chapter 28 is xml chapter Prov 35
+
+reader edition chapter 29 is xml chapter 36
+
+reader chapter 30 is split in 2 in xml (both chapter 30)
+
+reader chapter 30 is split in 2 in xml (both chapter 31)
+
+
 
