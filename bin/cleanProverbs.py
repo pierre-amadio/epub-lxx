@@ -1,7 +1,7 @@
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+
 Proverbs numbering is weird:
 <chapter osisID="Prov.23">
 <chapter osisID="Prov.24">
@@ -41,3 +41,15 @@ There are 2 "chapter 24" (v 1-22e and v23-34) in the xml file. Need to be merged
 * There are two chapter 30 in the xml file. Need to be merged into 1.
 * There are two chapter 31 in the xml file. Need to be merged into 1.
 """
+import sys
+import re
+from bs4 import BeautifulSoup
+
+inputFile=sys.argv[1]
+outputDir=sys.argv[2]
+outputFile="27.Proverbs.xml"
+
+with open(inputFile) as fp:
+    soup = BeautifulSoup(fp, 'xml')
+
+print(soup)

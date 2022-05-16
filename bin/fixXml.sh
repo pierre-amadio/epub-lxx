@@ -48,7 +48,8 @@ cp xml/26.3Macc.xml clean/23-3Macc.xml
 cp xml/27.4Macc.xml clean/24-4Macc.xml
 cp xml/28.Psalms.xml clean/25-Ps.xml
 #prayer of manashe is already in odes.
-cp xml/31.Proverbs.xml clean/27-Prov.xml
+#cp xml/31.Proverbs.xml clean/27-Prov.xml
+./bin/cleanProverbs.py xml/31.Proverbs.xml clean/
 cp xml/32.Qoheleth.xml clean/28-Eccl.xml
 cp xml/33.Canticles.xml clean/29-Song.xml
 cp xml/34.Job.xml clean/30-Job.xml
