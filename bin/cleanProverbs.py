@@ -53,6 +53,9 @@ outputFile="27.Proverbs.xml"
 with open(inputFile) as fp:
     soup = BeautifulSoup(fp, 'xml')
 
+
+newChapters={}
+
 """
 We create a new soup with only the first 23 chapters.
 """
@@ -78,11 +81,44 @@ for curCha in soup.find_all("chapter"):
         copyChapter.append(copy.copy(curCha))
 
 newChapter=copyChapter[0]
+""" renaming all the 22 verses"""
+suffix=["","a","b","c","d","e"]
+cnt=0
 for verse in newChapter.find_all("verse"):
     m=re.match("Prov.24.(\d+)",verse["osisID"])
     if not m:
         print("Cannot parse",verse["osisID"])
         sys.exit()
     curVerse=int(m.group(1))
-    print(curVerse)
- 
+    if curVerse<22:
+        continue
+    newVerse="%s%s"%(str(curVerse),suffix[cnt])
+    cnt+=1
+    verse["osisID"]="Prov.24."+newVerse
+
+for verse in copyChapter[1].find_all("verse"):
+    newChapter.append(verse)
+
+newChapters[24]=copy.copy(newChapter)
+
+"""
+lets deal with chapter 25 to 29
+"""
+
+def changeChapter(s,f,t):
+    print("changing from %s to %s"%(f,t))
+    for curChapter in s.find_all("chapter"):
+        if curChapter["osisID"]=="Prov.%s"%f:
+            output=copy.copy(curChapter)
+            output["osisID"]="Prov.%s"%t
+            for curV in output.find_all("verse"):
+                pattern="Prov.%s.(\d+)"%f
+                m=re.match(pattern,curV["osisID"])
+                if not m:
+                    print("Cannot match",curV["osisID"])
+                    sys.exit()
+                newID="Prov.%s.%s"%(t,m.group(1))
+                curV["osisID"]=newID
+            print(output)
+
+newChapters[25]=changeChapter(soup,32,25)
