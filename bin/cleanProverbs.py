@@ -46,6 +46,8 @@ import re
 from bs4 import BeautifulSoup
 import copy
 
+print("Dealing with Proverbs")
+
 inputFile=sys.argv[1]
 outputDir=sys.argv[2]
 outputFile="%s/27.Prov.xml"%outputDir
