@@ -159,3 +159,5 @@ for ind in range(24,32):
     curDiv.append(newChapters[ind]) 
 
 
+
+print(new)
