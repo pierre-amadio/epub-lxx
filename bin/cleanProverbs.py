@@ -122,3 +122,7 @@ def changeChapter(s,f,t):
             print(output)
 
 newChapters[25]=changeChapter(soup,32,25)
+newChapters[26]=changeChapter(soup,33,26)
+newChapters[27]=changeChapter(soup,34,27)
+newChapters[28]=changeChapter(soup,35,28)
+newChapters[29]=changeChapter(soup,36,29)
