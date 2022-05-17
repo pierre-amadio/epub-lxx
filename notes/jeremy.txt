@@ -4,6 +4,7 @@ may be is it due to the following in the imp file:
 
 $$$Jer/7/27/28
 
-wich is alrleady in the 52.Jer1.mlxx file
+wich is alrleady in the 52.Jer1.mlxx file:
+Jer 7:27/28
 
 There is no verse 28 in the reader edition, may be just removing it would be a proper fix ?
